@@ -1,0 +1,23 @@
+<mvc:View controllerName="sap.ui.demo.walkthrough.controller.InvoiceList" xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+
+  <List id="invoiceList" class="sapUiResponsiveMargin" width="auto" items="{backjson>/}">
+
+    <headerToolbar>
+      <Toolbar>
+        <Title text="{i18n>invoiceListTitle}" />
+        <ToolbarSpacer />
+        <SearchField width="50%" search=".onFilterInvoices" />
+      </Toolbar>
+    </headerToolbar>
+
+
+    <items>
+      <ObjectListItem title="Id:{backjson>id} ---- Producto:{backjson>descripcion} ---- Precio:{backjson>precio} ---- Stock:{backjson>stock}">
+      </ObjectListItem>
+    </items>
+
+  </List>
+
+
+</mvc:View>
